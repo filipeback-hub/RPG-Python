@@ -13,7 +13,7 @@ fase = 1
 nome = str(input('Digite seu nome: ')).title().strip()
 print(' [1] Guerreiro/a \n [2] Arqueiro/a \n [3] Mago/Bruxa')
 while True:
-    tipo = int(input('Qual voçê quer ser? '))
+    tipo = int(input('Qual você quer ser? '))
     if tipo == 1:
         pers = 'Guerreiro/a'
         break
@@ -29,10 +29,10 @@ sleep(0.5)
 
 print('-='*25)
 while True:
-    inimigos = ['Dragão', 'Globin', 'Slime','Vampiro','Lobisomem']
+    inimigos = ['Dragão', 'Goblin', 'Slime','Vampiro','Lobisomem']
     inimigo = choice(inimigos)
     print(f'''{pers} {nome}, apareceu um {inimigo} no caminho,
-o que voçê vai fazer?''')
+o que você vai fazer?''')
     sleep(2)
 
     while True:
@@ -59,7 +59,7 @@ o que voçê vai fazer?''')
             if critico == 0:
                 print('Seu inimigo acertou um dano CRITICO')
                 ini_dano += 30
-            print(f'- O ataque inimigo deu {ini_dano} de dano em voçê -')
+            print(f'- O ataque inimigo deu {ini_dano} de dano em você -')
             sua_vida -= ini_dano
             ini_vida -= seu_dano
             sleep(1.5)
@@ -67,7 +67,7 @@ o que voçê vai fazer?''')
                 print('Voçê \033[1;32mVENCEU\033[m, Parábens')
                 moedasFase = randint(1, 10)
                 moedas += moedasFase
-                print(f'Voçê recebeu {moedasFase} moedas por ter vencido o {inimigo}')
+                print(f'Você recebeu {moedasFase} moedas por ter vencido o {inimigo}')
                 sleep(1)
                 fase += 1
                 sua_vida = 100
@@ -85,18 +85,18 @@ o que voçê vai fazer?''')
         elif n == 2:
             if cura >= 1:
                 cura = randint(10,40)
-                print(f'- Voçê recuperou {cura} de vida -')
+                print(f'- Você recuperou {cura} de vida -')
                 sua_vida += cura
                 cont_cura += 1
                 cura -= 1
             elif cura <= 0:
-                print('Voçê não possui cura \nCompre na loja')
+                print('Você não possui cura \nCompre na loja')
             sleep(1.5)
 
         elif n == 3:
             print()
             print(f'{'STATUS':=^20}')
-            print(f'Voçê: {pers} {nome}')
+            print(f'Você: {pers} {nome}')
             print(f'Fase: {fase}')
             print(f'Inimigo: {inimigo}')
             print(f'Sua vida: {sua_vida}')
@@ -130,7 +130,7 @@ o que voçê vai fazer?''')
                     moedas -= 5
                     cura += 1
                     sleep(0.5)
-                    print(f'Voçê comprou {item} por {preco} moedas')
+                    print(f'Você comprou {item} por {preco} moedas')
                     sleep(0.5)
                 else:
                     sleep(0.5)
@@ -141,7 +141,7 @@ o que voçê vai fazer?''')
                     moedas -= 15
                     escudo = 5
                     sleep(0.5)
-                    print(f'Voçê comprou {item} por {preco} moedas')
+                    print(f'Você comprou {item} por {preco} moedas')
                     sleep(0.5)
                 else:
                     sleep(0.5)
@@ -152,7 +152,7 @@ o que voçê vai fazer?''')
                     moedas -= 20
                     espada = 10
                     sleep(0.5)
-                    print(f'Voçê comprou {item} por {preco} moedas')
+                    print(f'Você comprou {item} por {preco} moedas')
                     sleep(0.5)
                 else:
                     sleep(0.5)
